@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingenieurbüro Dogan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="logo.png" alt="Logo Ingenieurbüro Dogan" class="logo" />
+    <div class="header-right">
+      <div class="header-info">
+        <a href="mailto:info@dogan.de" class="header-link">
+          <img src="icons/email.png" alt="E-Mail" class="icon" />
+          info@dogan.de
+        </a>
+        <a href="tel:+491234567890" class="header-link">
+          <img src="icons/phone.png" alt="Telefon" class="icon" />
+          +49 177 8087356
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li>
+        <a href="#" class="nav-link-menu">ÜBER UNS <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown">
+          <li><a href="#">Unser Team</a></li>
+          <li><a href="#">Geschichte</a></li>
+          <li><a href="#">Vision & Werte</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="nav-link-menu">PROJEKTE <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown">
+          <li><a href="#">Aktuelle Projekte</a></li>
+          <li><a href="#">Abgeschlossene Projekte</a></li>
+          <li><a href="#">Referenzen</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="nav-link-menu">PARTNER <span class="arrow">&#9662;</span></a>
+        <ul class="dropdown">
+          <li><a href="#">Unsere Partner</a></li>
+          <li><a href="#">Partner werden</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="nav-link-menu">KONTAKT</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- DIASHOW + TEXT -->
+  <section class="slideshow-outer">
+    <div class="slideshow-text-wrapper">
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="/BilderDiashow/bau1.png" alt="Brücken-Baustelle" />
+        </div>
+        <div class="slide fade">
+          <img src="/BilderDiashow/bau2.png" alt="Hochhaus-Bau" />
+        </div>
+        <div class="slide fade">
+          <img src="/BilderDiashow/bau3.png" alt="Straßenbau" />
+        </div>
+        <div class="slide fade">
+          <img src="/BilderDiashow/bau4.png" alt="Tunnelbau" />
+        </div>
+        <div class="slide fade">
+          <img src="/BilderDiashow/bau5.png" alt="Baukran" />
+        </div>
+      </div>
+      <div class="text-side">
+        Vertrauen Sie auf Erfahrung, Verantwortung und technische Exzellenz – mit mir als Bauüberwacher wird Ihr Projekt termingerecht, wirtschaftlich und mit höchster Qualität umgesetzt.
+      </div>
+    </div>
+  </section>
+
+  <!-- HINTERGRUNDBILD ABSCHNITT 1 -->
+  <section class="fullscreen-bg" style="background-image: url('bilderHintergrund/projekt1.png')">
+    <div class="fullscreen-text">
+      <h2>Wir überwachen Ihr Projekt mit Leidenschaft und Präzision.</h2>
+    </div>
+  </section>
+
+  <section class="normal-section">
+    <h3>Unsere Leistungen auf einen Blick</h3>
+    <ul>
+      <li>Kontinuierliche Überwachung der Bauausführung gemäß Planung und Bauvertrag</li>
+      <li>Sicherstellung von Termin- und Kostenkontrolle</li>
+      <li>Überprüfung und Dokumentation der Bauqualität</li>
+      <li>Koordination aller am Bau beteiligten Firmen und Fachplaner</li>
+      <li>Sicherheits- und Gesundheitsschutz auf der Baustelle</li>
+      <li>Abnahme und Überprüfung von Bauleistungen</li>
+      <li>Fachgerechte Mängelverfolgung und -beseitigung</li>
+      <li>Transparente Kommunikation mit Auftraggebern und Behörden</li>
+      <li>Erstellung von Berichten, Bauprotokollen und Dokumentationen</li>
+      <li>Einhaltung aller technischen Vorschriften und Normen</li>
+    </ul>
+  </section>
+
+  <!-- HINTERGRUNDBILD ABSCHNITT 2 -->
+  <section class="fullscreen-bg" style="background-image: url('bilderHintergrund/projekt2.png')">
+    <div class="fullscreen-text">
+      <h2>Qualität, Sicherheit und Termintreue – dafür stehen wir!</h2>
+    </div>
+  </section>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3500);
+    }
+  </script>
+</body>
+</html>
